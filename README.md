@@ -1,7 +1,7 @@
 # Portifolio
 # My Multi-Page Website
 
-![Website Preview](images/preview.jpg) <!-- Optional: Replace with a screenshot if you have one -->
+![Website Preview](Images/preview.jpg) <!-- Optional: Replace with a screenshot if you have one -->
 
 ## Overview
 This is a simple multi-page website built with **HTML5** and **CSS3**. It contains five pages, each with its own styling, plus a global CSS file for shared styles.  
