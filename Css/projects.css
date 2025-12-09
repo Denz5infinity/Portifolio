@@ -1,0 +1,102 @@
+/* -------------------- PROJECTS SECTION -------------------- */
+
+.projects {
+  padding: 40px 15px;
+  margin-top: 30px;
+}
+
+.projects h3 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.projects p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 35px auto;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* GRID LAYOUT: phone = 1, tablet = 2, laptop = 3 */
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  padding: 10px;
+}
+
+/* Tablets */
+@media (min-width: 600px) {
+  .projects-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptops */
+@media (min-width: 900px) {
+  .projects-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* -------------------- PROJECT CARDS -------------------- */
+
+.project-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 15px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Hover animation */
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Project title */
+.project-card h5 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+/* Images inside cards */
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Description */
+.project-card p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+/* Button */
+.project-card button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent);
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.project-card button:hover {
+  background-color: #38a8c3;
+  transform: scale(1.05);
+}

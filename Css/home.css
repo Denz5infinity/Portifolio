@@ -1,0 +1,302 @@
+/* -------------------- RESET -------------------- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #1E1E1E;
+  --secondary: #2D2D2D;
+  --accent: #4CC9F0;
+  --text-color: #FFFFFF;
+  --light-gray: #B0B0B0;
+  --card-bg: rgba(255,255,255,0.05);
+  --shadow: rgba(0,0,0,0.25);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--secondary);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0 20px;
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+  color: var(--accent);
+}
+
+.logo span {
+  font-size: 1rem;
+  font-family: 'Tahoma', sans-serif;
+  font-weight: bold;
+  color: #FF6B6B;
+  transition: color 0.3s ease;
+}
+
+.logo span:hover {
+  color: var(--accent);
+}
+
+.right-header ul {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.right-header ul li a {
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 8px 4px;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.right-header ul li a:hover {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* -------------------- MAIN -------------------- */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 1rem 1.5rem;
+  gap: 2rem;
+}
+
+/* -------------------- HERO -------------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.08));
+  box-shadow: 0 8px 20px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.hero:hover {
+  transform: translateY(-2px);
+}
+
+.hero-left h4 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.hero-left h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--light-gray);
+}
+
+.hero-left p {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--light-gray);
+}
+
+.profile-picture {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+/* -------------------- ABOUT ME -------------------- */
+.about-me {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-me-wrapper {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-me img {
+  float: right;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+  box-shadow: 0 6px 15px var(--shadow);
+}
+
+/* -------------------- SKILLS -------------------- */
+.skills {
+  width: 100%;
+}
+
+.skill-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px var(--shadow);
+}
+
+.skill-card img {
+  margin: 0.5rem 0;
+}
+
+/* -------------------- PROJECTS -------------------- */
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+.project-card button {
+  margin-top: 0.8rem;
+}
+
+/* -------------------- BUTTONS -------------------- */
+.btn,
+button {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--accent);
+  color: #0b0b0b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover,
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.btn:active,
+button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* -------------------- CONTACTS -------------------- */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-card i {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  font-weight: 500;
+  box-shadow: 0 -4px 12px var(--shadow);
+  margin-top: 2rem;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media(min-width: 768px){
+  .hero { flex-direction: row; align-items: center; gap: 3rem; }
+  .hero-left h4 { font-size: 3rem; }
+  .hero-left p { font-size: 1.1rem; }
+  .profile-picture { width: 16rem; height: 16rem; }
+  .skill-wrapper { grid-template-columns: repeat(2, 1fr); }
+  .projects-wrapper { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(min-width: 1024px){
+  .skill-wrapper { grid-template-columns: repeat(3,1fr); }
+  .projects-wrapper { grid-template-columns: repeat(3,1fr); }
+  .contact-wrapper { flex-direction: row; justify-content: space-around; }
+  .profile-picture { width: 18rem; height: 18rem; }
+}

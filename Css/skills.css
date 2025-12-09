@@ -1,0 +1,248 @@
+/* -------------------- RESET -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #1E1E1E;
+  --secondary: #2D2D2D;
+  --accent: #4CC9F0;
+  --text-color: #FFFFFF;
+  --card-bg: rgba(169,169,169,0.3);
+  --shadow: rgba(0,0,0,0.25);
+  --light-gray: #B0B0B0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--secondary);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0 20px;
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  color: var(--accent);
+}
+
+.logo span {
+  font-size: 1rem;
+  font-family: 'Tahoma', sans-serif;
+  font-weight: bold;
+  color: #FF6B6B;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.logo span:hover {
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.right-header ul {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.right-header ul li {
+  list-style: none;
+}
+
+.right-header ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 20px 4px;
+  transition: all ease 0.15s;
+}
+
+.right-header ul li a:hover {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* -------------------- MAIN -------------------- */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.55rem;
+  padding: 0.2rem 1rem;
+  gap: 2rem;
+}
+
+/* -------------------- SKILLS -------------------- */
+.skills {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.skills h3 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.skills p {
+  font-size: 0.95rem;
+  color: lightgray;
+  margin-bottom: 1.5rem;
+}
+
+.skill-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.skill-card {
+  background-color: var(--card-bg);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+}
+
+.skill-card img {
+  margin: 0.5rem 0;
+  width: 80px;
+  height: auto;
+}
+
+.skills h4 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+/* -------------------- BUTTON -------------------- */
+.btn,
+button {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background-color: var(--accent);
+  color: #0b0b0b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.btn:hover,
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  opacity: 0.98;
+}
+
+.btn:active,
+button:active {
+  transform: translateY(-1px) scale(0.995);
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media(min-width: 768px) {
+  .skill-wrapper { grid-template-columns: repeat(2,1fr); }
+}
+
+@media(min-width: 1024px) {
+  .skill-wrapper { grid-template-columns: repeat(3,1fr); }
+}
+
+/* -------------------- HAMBURGER MENU -------------------- */
+#menu-toggle { display: none; }
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+@media(max-width:700px){
+  .hamburger{ display:flex; }
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    width: 160px;
+    line-height: 30px;
+    background-color: gray;
+    position: absolute;
+    top: 50px;
+    right: -200px;
+    transition: 0.4s;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  #menu-toggle:checked ~ ul { right: 10px; }
+  .right-header ul li a { font-size: 1.2rem; padding: 10px 4px; }
+}
+#menu-toggle:checked + .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+#menu-toggle:checked + .hamburger span:nth-child(2) { opacity:0; }
+#menu-toggle:checked + .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(8px,-8px); }
